@@ -95,9 +95,11 @@ def load_flights(file_name):
 @click.command()
 @click.argument('command')
 @click.argument('filename')
-@click.option('--flight_dest')
-@click.option('--number')
-@click.option('--type')
+@click.option('--flight_dest', prompt='Destination?',
+              help='The flight destination'
+)
+@click.option('--number', prompt='Enter flight num', help='The flight number')
+@click.option('--type', prompt='Enter airplane type', help='The airplane type')
 def main(command, filename, flight_dest, number, type):
     """
     Главная функция программы
